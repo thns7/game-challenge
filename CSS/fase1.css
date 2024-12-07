@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  height: 100vh; /* Garante que a altura seja 100% da janela de visualização */
+  overflow: hidden; /* Evita rolagem */
+  background-size: cover; /* Faz com que a imagem cubra toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição */
+  background-image: url(./cenarios/fase1.gif); /* Imagem de fundo */
+}
+
+.personagem {
+  width: 80px;
+  height: 150px;
+  position: absolute;
+  background-size: cover; /* Ajusta a imagem do personagem */
+  background-image: url(./personagens/petersonfrenteA.png); /* Imagem do personagem */
+  background-repeat: no-repeat;
+  bottom: 0; /* Posiciona na parte inferior */
+  left: 50%; /* Inicializa centralizado horizontalmente */
+  transform: translateX(-50%); /* Ajusta para a verdadeira centralização */
+}
+
+.jump-animation {
+  animation: jumpAnimation 0.5s ease-in-out; /* Animação do pulo */
+}
+
+@keyframes jumpAnimation {
+  from {
+    bottom: 0;
+  }
+  50% {
+    bottom: 150px; /* Altura intermediária do pulo */
+  }
+  to {
+    bottom: 15px; /* Retorna à posição inicial */
+  }
+}
+
+.tiro {
+  background-image: url(./inimigos/tiro.gif);
+  background-size: cover;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+}
+
+.inimigo,
+.inimigoB {
+  width: 250px;
+  height: 160px;
+  position: absolute;
+  bottom: 0; /* Posiciona na mesma linha que o personagem */
+  left: 50%; /* Inicializa centralizado horizontalmente */
+  transform: translateX(-50%); /* Ajusta para a centralização */
+  background-size: 120px;
+  background-repeat: no-repeat;
+}
+
+.inimigo {
+  background-image: url(./inimigos/fantasma.gif);
+}
+
+.inimigoB {
+  background-image: url(./inimigos/fantasma.gif);
+}
+
+.lives {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.tiro-esquerda {
+  background-image: url(./tiros/gifmonstro-unscreen.gif);
+}

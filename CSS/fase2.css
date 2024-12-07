@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url(./cenario/boss1.gif);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+}
+
+.personagem {
+  width: 80px;
+  height: 150px;
+  position: absolute;
+  background-size: 80px;
+  background-image: url(./personagens/petersonfrenteA.png);
+  background-repeat: no-repeat;
+  border-color: black 1px;
+  bottom: 0; /* Garante que o personagem esteja na base */
+  left: 50px;
+  transform: translateX(-50%);
+}
+
+.jump-animation {
+  animation: jumpAnimation 0.5s ease-in-out;
+}
+
+@keyframes jumpAnimation {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.tiro {
+  background-image: url(./inimigos/tiro.gif);
+  background-size: cover;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+}
+
+.inimigo {
+  width: 350px;
+  height: 200px;
+  position: absolute;
+  bottom: 0; /* Garante que o inimigo esteja na mesma linha de base que o personagem */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%);
+  background-image: url(./inimigos/inimigoFrenteA-unscreen.gif);
+  background-size: 300px;
+  background-repeat: no-repeat;
+}
+
+.inimigoB {
+  width: 250px;
+  height: 160px;
+  position: absolute;
+  bottom: 0; /* Garante que o inimigo esteja na mesma linha de base que o personagem */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%);
+  background-image: url(./inimigos/inimigoFrenteA-unscreen.gif);
+  background-size: 120px;
+  background-repeat: no-repeat;
+}
+
+.lives {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.tiro-esquerda {
+  background-image: url(./tiros/gifmonstro-unscreen.gif);
+}
